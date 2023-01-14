@@ -26,5 +26,5 @@ const items = ref(["works", "about"])
   align-items: center;
 }
 .menu{display: flex;}
-.menu li{margin-left: 1rem;font-size: 1.2rem;}
+.menu li{margin-left: 1rem;font-size: 1.2rem;list-style: none;}
 </style>
