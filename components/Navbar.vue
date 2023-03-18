@@ -1,3 +1,14 @@
+<template>
+  <div class="navbar">
+    <h1><nuxt-link to="/">{{ msg }}</nuxt-link></h1>
+    <ul class="menu">
+      <li v-for="item in items" :key="item.key" class="text-lg font-bold">
+        <nuxt-link :to="`/${item}`">{{item}}</nuxt-link>
+      </li>
+    </ul>
+  </div>
+</template>
+
 <script setup>
 defineProps({
   msg: String
@@ -5,26 +16,14 @@ defineProps({
 const items = ref(["works", "about"])
 </script>
 
-<template>
-  <div class="navbar">
-    <a class="text-xl font-bold" href="#">
-      <h1>{{ msg }}</h1>
-    </a>
-    <ul class="menu">
-      <li v-for="item in items" :key="item.key" class="text-lg font-bold">
-        <a :href="`/${item}`">{{item}}</a>
-      </li>
-    </ul>
-  </div>
-</template>
-
 <style scoped>
+h1 a{text-decoration: none;}
 .navbar{
-  padding: 1rem;
+  padding-right: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 .menu{display: flex;}
-.menu li{margin-left: 1rem;font-size: 1.2rem;list-style: none;}
+.menu li{margin-left: .5rem;font-size: 1.2rem;list-style: none;}
 </style>

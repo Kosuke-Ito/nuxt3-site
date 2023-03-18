@@ -8,5 +8,5 @@
 </template>
 
 <style>
-body{margin: 0;}
+body{margin: 0 .5rem;}
 </style>
