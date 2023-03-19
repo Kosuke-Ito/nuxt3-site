@@ -23,6 +23,7 @@ h1 a{text-decoration: none;}
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 6rem;
 }
 .menu{display: flex;}
 .menu li{margin-left: .5rem;font-size: 1.2rem;list-style: none;}
