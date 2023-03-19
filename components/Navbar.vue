@@ -2,7 +2,7 @@
   <div class="navbar">
     <h1><nuxt-link to="/">{{ msg }}</nuxt-link></h1>
     <ul class="menu">
-      <li v-for="item in items" :key="item.key" class="text-lg font-bold">
+      <li v-for="item in menuItems" :key="item.key">
         <nuxt-link :to="`/${item}`">{{item}}</nuxt-link>
       </li>
     </ul>
@@ -13,7 +13,7 @@
 defineProps({
   msg: String
 })
-const items = ref(["works", "about"])
+const menuItems = ref(['photograph', 'engineering', 'about'])
 </script>
 
 <style scoped>
@@ -23,7 +23,6 @@ h1 a{text-decoration: none;}
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 6rem;
 }
 .menu{display: flex;}
 .menu li{margin-left: .5rem;font-size: 1.2rem;list-style: none;}
